@@ -1,6 +1,7 @@
 package com.limelight.binding.video.debug;
 
 import java.awt.Color;
+import java.awt.Graphics;
 
 import com.limelight.binding.video.SwingCpuDecoderRenderer;
 import com.limelight.nvstream.av.video.cpu.AvcDecoder;
@@ -12,8 +13,9 @@ import com.limelight.nvstream.av.video.cpu.AvcDecoder;
  */
 public class DebugCpuDecoderRenderer extends SwingCpuDecoderRenderer {
     private long lastFrameTime;
+	private Graphics graphics;
 
-    @Override protected void renderFrame(int[] imageBuffer) {
+    protected void renderFrame(int[] imageBuffer) {
         // Render the frame normally
         double widthScale = (double) frame.getWidth() / width;
         double heightScale = (double) frame.getHeight() / height;

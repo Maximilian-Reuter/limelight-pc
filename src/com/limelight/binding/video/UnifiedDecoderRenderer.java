@@ -32,7 +32,7 @@ public class UnifiedDecoderRenderer extends SwingCpuDecoderRenderer {
         frame.add(component, 0, 0);
     }
 
-    @Override protected void renderFrame(int[] imageBuffer) {
+   protected void renderFrame(int[] imageBuffer) {
         //long decodeStart = System.currentTimeMillis();
         // Render the frame into the buffered image
         boolean decoded = AvcDecoder.getRgbFrameInt(imageBuffer, imageBuffer.length);
