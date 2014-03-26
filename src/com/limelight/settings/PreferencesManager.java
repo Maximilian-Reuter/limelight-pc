@@ -1,3 +1,4 @@
+
 package com.limelight.settings;
 
 import java.io.File;
@@ -173,3 +174,4 @@ public abstract class PreferencesManager {
 		}
 	}
 }
+
