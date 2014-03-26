@@ -83,7 +83,7 @@ public class GLDecoderRenderer implements VideoDecoderRenderer, GLEventListener 
         System.out.println("Using OpenGL rendering");
 
         // Add canvas to the frame
-        glcanvas.setSize(width, height);
+        glcanvas.setSize(frame.getWidth(), frame.getHeight());
         glcanvas.addGLEventListener(this);
         
         for (MouseListener m : frame.getMouseListeners()) {
@@ -218,7 +218,7 @@ public class GLDecoderRenderer implements VideoDecoderRenderer, GLEventListener 
         animator.stop();
     }
 
-	@Override
+	
 	public int getCapabilities() {
 		// TODO Auto-generated method stub
 		return 0;
